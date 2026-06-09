@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class pushthisbutton : MonoBehaviour
 {
+
+    [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip ohmygod;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,5 +23,11 @@ public class pushthisbutton : MonoBehaviour
     {
 
         Debug.Log("Omg, You pushed me!");
+    }
+
+    public void Audiojaeseng()
+    {
+
+        GetComponent<AudioSource>().PlayOneShot(ohmygod);
     }
 }
